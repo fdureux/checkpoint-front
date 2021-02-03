@@ -1,0 +1,47 @@
+@media screen and (max-width: 792px) {
+  .navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .navbar p {
+    display: none;
+  }
+
+  .navbar svg {
+    width: 20vw;
+    height: 7vh;
+  }
+}
+
+@media screen and (min-width: 793px) {
+  .icon {
+    display: none;
+  }
+  .navbar {
+    margin-left: 60%;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar svg {
+  color: var(--deepblue);
+  filter: drop-shadow(1px 1px 1px var(--deepblue));
+}
+
+.navbar a {
+  color: var(--deepblue);
+  text-decoration: none;
+}
+
+.navbar .selected {
+  color: var(--blue);
+}
+
+.navbar .selected svg {
+  color: var(--blue);
+}

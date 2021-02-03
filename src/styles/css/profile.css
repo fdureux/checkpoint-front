@@ -1,0 +1,19 @@
+.profile-picture img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin: 1rem;
+}
+
+@media screen and (max-width: 792px) {
+  .profile-picture img {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
