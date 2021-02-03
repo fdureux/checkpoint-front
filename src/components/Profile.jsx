@@ -7,15 +7,15 @@ import "../styles/css/profile.css";
 const Profile = () => {
   const [userInfos, setUserInfos] = useState({});
   const [userStat, setUserStat] = useState([]);
+
   useEffect(() => {
     axios
       .get("http://localhost:8080/api/bookshelves/stats/users/1")
       .then((response) => {
         setUserStat(response.data);
+        setUserInfos(response.data[0]);
       });
   });
-
-  setUserInfos(userStat[0]);
 
   return (
     <div className="profile">
@@ -27,7 +27,8 @@ const Profile = () => {
         </div>
         <div className="username">{userInfos.username}</div>
       </div>
-      <div className="reading-stats">{userStat.length}</div>
+      <div className="reading-stats">{userStat.length} livres </div>
+      <div> Voir sa bibliothèque</div>
     </div>
   );
 };
