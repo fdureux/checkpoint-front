@@ -4,7 +4,8 @@
     bottom: 0;
     width: 100%;
   }
-  .navbar p {
+  .navbar p,
+  .search-bar {
     display: none;
   }
 
@@ -18,28 +19,38 @@
   .icon {
     display: none;
   }
-  .navbar {
-    margin-left: 60%;
-  }
 }
 
 .navbar {
+  display: flex;
+  padding: 0 2rem;
+  justify-content: space-between;
+  background: #0b345d;
+  background-image: linear-gradient(
+    155deg,
+    var(--deepblue) 0%,
+    #2a4f96 50%,
+    var(--blue) 100%
+  );
+}
+
+.navigation {
   display: flex;
   justify-content: space-around;
 }
 
 .navbar svg {
-  color: var(--deepblue);
+  color: white;
   filter: drop-shadow(1px 1px 1px var(--deepblue));
 }
 
 .navbar a {
-  color: var(--deepblue);
-  text-decoration: none;
+  color: white;
 }
 
 .navbar .selected {
   color: var(--blue);
+  text-decoration: none;
 }
 
 .navbar .selected svg {

@@ -27,8 +27,8 @@ const LandingPage = () => {
         </div>
         <div className="presentation">
           {" "}
-          E-Bookshelf vous permet de gérer votre bibliothèque. Ajouter des
-          livres, découvrez-en de nouveau, ajouter des commentaires et partez
+          E-Bookshelf vous permet de gérer votre bibliothèque. Ajoutez des
+          livres, découvrez-en de nouveaux, publiez des commentaires et partez
           explorer les bibliothèques des autres!
         </div>
       </section>

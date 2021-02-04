@@ -5,17 +5,18 @@ import Navbar from "./Navbar";
 import "../styles/css/profile.css";
 
 const Profile = () => {
-  const [userInfos, setUserInfos] = useState({});
   const [userStat, setUserStat] = useState([]);
+  const [userInfo, setUserInfo] = useState({});
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/bookshelves/stats/users/1")
+      .get("http://localhost:8080/api/bookshelves/stats/users/2")
       .then((response) => {
-        setUserStat(response.data);
-        setUserInfos(response.data[0]);
+        const data = response.data;
+        setUserInfo(data[0]);
+        setUserStat(data);
       });
-  });
+  }, []);
 
   return (
     <div className="profile">
@@ -23,9 +24,13 @@ const Profile = () => {
       <Navbar />
       <div className="profile-card">
         <div className="profile-picture">
-          <img src={userInfos.avatar} alt="user" img />
+          <img
+            src={userInfo.avatar && userInfo.avatar.toString()}
+            alt="user"
+            img
+          />
         </div>
-        <div className="username">{userInfos.username}</div>
+        <div className="username">{userInfo.username}</div>
       </div>
       <div className="reading-stats">{userStat.length} livres </div>
       <div> Voir sa bibliothèque</div>
