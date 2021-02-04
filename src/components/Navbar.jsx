@@ -9,20 +9,23 @@ import "../styles/css/navbar.css";
 const Navbar = () => {
   return (
     <div className="navbar">
-      <div className="search-bar">
-        <input placeholder="Chercher un titre ou un auteur" />
-        <button> Loupe</button>
-      </div>
+      <div className="logo">E-bookshelf</div>
       <div className="navigation">
-        <NavLink to="/" activeClassName="selected">
+        <NavLink
+          to="/bibliotheque"
+          className="navlink"
+          activeClassName="selected">
           {" "}
-          <p>Bibliothèque</p>{" "}
+          <p>Mes livres</p>{" "}
           <div className="icon">
             {" "}
             <ImBooks />
           </div>
         </NavLink>
-        <NavLink to="/" activeClassName="selected">
+        <NavLink
+          to="/decouverte"
+          className="navlink"
+          activeClassName="selected">
           {" "}
           <p>Découverte</p>
           <div className="icon">
@@ -30,7 +33,7 @@ const Navbar = () => {
             <IoCompassOutline />
           </div>
         </NavLink>
-        <NavLink to="/profil" activeClassName="selected">
+        <NavLink to="/profil" className="navlink" activeClassName="selected">
           {" "}
           <p>Profil</p>
           <div className="icon">

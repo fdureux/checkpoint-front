@@ -5,6 +5,13 @@
   margin: 1rem;
 }
 
+.picture {
+  height: 55vh;
+  position: fixed;
+  bottom: 5;
+  right: 0;
+}
+
 @media screen and (max-width: 792px) {
   .profile-picture img {
     height: 80px;

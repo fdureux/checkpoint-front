@@ -1,30 +1,8 @@
-@media screen and (max-width: 792px) {
-  .navbar {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  .navbar p,
-  .search-bar {
-    display: none;
-  }
-
-  .navbar svg {
-    width: 20vw;
-    height: 7vh;
-  }
-}
-
-@media screen and (min-width: 793px) {
-  .icon {
-    display: none;
-  }
-}
-
 .navbar {
   display: flex;
-  padding: 0 2rem;
+  padding: 1.5rem 2rem;
   justify-content: space-between;
+  align-items: center;
   background: #0b345d;
   background-image: linear-gradient(
     155deg,
@@ -34,25 +12,49 @@
   );
 }
 
+.logo {
+  font-family: "Pacifico", cursive;
+  color: var(--deeporange);
+  font-size: 28px;
+  filter: drop-shadow(1px 1px 3px white);
+}
+
 .navigation {
   display: flex;
   justify-content: space-around;
 }
 
-.navbar svg {
+.navlink svg {
   color: white;
   filter: drop-shadow(1px 1px 1px var(--deepblue));
 }
 
 .navbar a {
   color: white;
-}
-
-.navbar .selected {
-  color: var(--blue);
   text-decoration: none;
 }
 
-.navbar .selected svg {
-  color: var(--blue);
+@media screen and (min-width: 793px) {
+  .icon {
+    display: none;
+  }
+
+  .navbar p {
+    padding-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 793px) {
+  .navlink p,
+  .search-bar {
+    display: none;
+  }
+
+  .icon {
+    padding-right: 2rem;
+  }
+  .navlink svg {
+    color: white;
+    filter: drop-shadow(1px 1px 1px var(--deepblue));
+  }
 }

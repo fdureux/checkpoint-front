@@ -1,0 +1,87 @@
+.cover-book img {
+  height: 200px;
+  width: 150px;
+  padding: 10px;
+}
+
+.back-book {
+  padding-top: 2rem;
+}
+
+.title {
+  text-align: center;
+}
+
+.author {
+  font-size: smaller;
+  padding: 0.2rem 0 4rem 1rem;
+}
+
+.show-more {
+  color: var(--deepblue);
+  margin: 0 auto;
+  border: solid 2px var(--deepblue);
+  background: white;
+  width: 70%;
+  text-align: center;
+  padding: 1rem 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.book-card {
+  display: flex;
+  margin: 1rem auto;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.book-general {
+  display: flex;
+  width: 360px;
+  height: 220px;
+  padding: 5px 5px 3px;
+  background-color: var(--deeporange);
+}
+
+.cover-book {
+  width: 180px;
+  border: solid 1px #f9dfc8;
+  border-left: solid 2px #afc3fe;
+  border-radius: 5% 15% 0 5%;
+  background-color: white;
+}
+.back-book {
+  width: 180px;
+  border-top: solid 1px var(--lightorange);
+  border-bottom: solid 1px var(--lightorange);
+  border-right: solid 3px #afc3fe;
+  border-radius: 15% 5% 5% 0;
+  background-color: white;
+}
+
+.select-off {
+  display: none;
+}
+
+.add {
+  background: var(--deepblue);
+  border: solid 2px var(--deepblue);
+  color: white;
+  padding: 0.7rem 1rem;
+  margin-left: 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.adding-book {
+  display: flex;
+  flex-direction: column;
+}
+
+select {
+  border: none;
+  font-family: "Raleway", sans-serif;
+  background-color: white;
+}

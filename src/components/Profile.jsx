@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import Navbar from "./Navbar";
 
+import reading from "../styles/assets/profile.jpg";
 import "../styles/css/profile.css";
 
 const Profile = () => {
   const [userStat, setUserStat] = useState([]);
   const [userInfo, setUserInfo] = useState({});
+
+  userStat.map((book) => {
+    return book.country;
+  });
 
   useEffect(() => {
     axios
@@ -33,7 +39,12 @@ const Profile = () => {
         <div className="username">{userInfo.username}</div>
       </div>
       <div className="reading-stats">{userStat.length} livres </div>
-      <div> Voir sa bibliothèque</div>
+      <Link to="/bibliotheque"> Voir ma bibliothèque</Link>
+      <img
+        className="picture"
+        src={reading}
+        alt="women on top of a book stack"
+      />
     </div>
   );
 };

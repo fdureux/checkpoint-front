@@ -34,11 +34,11 @@ const LandingPage = () => {
       </section>
       <img src={welcome} alt="tiny couple reading in sofa" />{" "}
       <div className="access">
-        <Link to="/profile" className="hvr-rectangle-out">
+        <Link to="/profil" className="hvr-rectangle-out">
           {" "}
           Se Connecter
         </Link>
-        <Link to="/profile" className="hvr-rectangle-out">
+        <Link to="/profil" className="hvr-rectangle-out">
           {" "}
           S'inscrire
         </Link>
