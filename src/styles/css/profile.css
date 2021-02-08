@@ -2,13 +2,28 @@
   border-radius: 50%;
   width: 150px;
   height: 150px;
-  margin: 1rem;
+  margin: 0.5rem;
 }
 
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  align-items: left;
+}
+.username {
+  padding-left: 2rem;
+}
+
+.bookshelf p {
+  font-size: 24px;
+  color: var(--lightorange);
+}
 .picture {
   height: 55vh;
   position: fixed;
-  bottom: 5;
+  bottom: 5px;
   right: 0;
 }
 
@@ -17,10 +32,18 @@
     height: 80px;
     width: 80px;
   }
+  .picture {
+    display: none;
+  }
+
+  .profile-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
-.profile-card {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+.profile {
+  margin-top: 6rem;
+  padding-left: 2rem;
 }

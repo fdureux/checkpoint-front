@@ -85,3 +85,36 @@ select {
   font-family: "Raleway", sans-serif;
   background-color: white;
 }
+
+.show-details {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+    155deg,
+    rgb(35, 56, 99, 0.5) 0%,
+    rgb(42, 79, 150, 0.5),
+    50%,
+    rgb(119, 164, 229, 0.5) 100%
+  );
+  z-index: 10;
+  overflow: hidden;
+}
+
+.detail-content {
+  background: white;
+  position: fixed;
+  z-index: 20;
+  width: 50vw;
+  height: 74vh;
+  left: 25vw;
+  top: 13vh;
+}
+
+.close-detail {
+  float: right;
+  margin: 1rem;
+  cursor: pointer;
+}

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { FaTimes } from "react-icons/fa";
 import "../styles/css/bookcard.css";
 const BookCard = (book) => {
   const [selectStatus, setSelectStatus] = useState(false);
   const [readingStatus, setReadingStatus] = useState("Ajouter");
+  const [bookDetails, setBookDetails] = useState(false);
 
   const postStatus = (readingStatus) => {
     if (readingStatus === "A Lire") {
@@ -39,6 +41,19 @@ const BookCard = (book) => {
 
   return (
     <div className="book-card">
+      <div className={bookDetails ? "show-details" : "display-off"}>
+        <div className="detail-content">
+          <div className="close-detail" onClick={() => setBookDetails(false)}>
+            <FaTimes />
+          </div>
+          <div>{book.title}</div>
+          <div>{book.pages} pages</div>
+          <div>
+            {book.firstname} {book.lastname} - {book.publication_date}
+          </div>
+          <div> {book.summary}</div>
+        </div>
+      </div>
       <div className="book-general">
         <div className="cover-book">
           <img className="img" src={book.cover_picture} alt={book.title} />
@@ -48,7 +63,9 @@ const BookCard = (book) => {
           <div className="author">
             {book.lastname} {book.firstname}
           </div>
-          <div className="show-more">Voir plus</div>
+          <div className="show-more" onClick={() => setBookDetails(true)}>
+            Voir plus
+          </div>
         </div>
       </div>
       <div className="adding-book">

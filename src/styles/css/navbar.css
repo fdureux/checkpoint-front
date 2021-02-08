@@ -1,5 +1,9 @@
 .navbar {
   display: flex;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
   padding: 1.5rem 2rem;
   justify-content: space-between;
   align-items: center;
@@ -22,11 +26,13 @@
 .navigation {
   display: flex;
   justify-content: space-around;
+  padding: 0 1rem;
 }
-
-.navlink svg {
+.navigation svg {
   color: white;
   filter: drop-shadow(1px 1px 1px var(--deepblue));
+  width: 32px;
+  height: 32px;
 }
 
 .navbar a {
@@ -34,7 +40,7 @@
   text-decoration: none;
 }
 
-@media screen and (min-width: 793px) {
+@media screen and (min-width: 551px) {
   .icon {
     display: none;
   }
@@ -44,17 +50,23 @@
   }
 }
 
-@media screen and (max-width: 793px) {
-  .navlink p,
-  .search-bar {
+@media screen and (max-width: 550px) {
+  p {
     display: none;
   }
 
   .icon {
-    padding-right: 2rem;
+    padding: 0 2rem;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
   }
-  .navlink svg {
-    color: white;
-    filter: drop-shadow(1px 1px 1px var(--deepblue));
+
+  .navigation {
+    margin: 0 auto;
+  }
+
+  .logo {
+    display: none;
   }
 }

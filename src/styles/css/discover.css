@@ -2,7 +2,7 @@
   max-width: 50vw;
   position: fixed;
   right: 3vw;
-  bottom: 15vh;
+  bottom: 11vh;
 }
 .book-list {
   display: flex;
@@ -10,6 +10,9 @@
   width: 50%;
 }
 
+.discover-container {
+  margin-top: 100px;
+}
 .display-off {
   display: none;
 }
@@ -24,4 +27,15 @@
   text-align: center;
   color: var(--deeporange);
   font-size: 20px;
+  cursor: pointer;
+}
+
+.missing-book {
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 992px) {
+  .discover-img {
+    display: none;
+  }
 }
